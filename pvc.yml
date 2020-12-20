@@ -1,0 +1,10 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: myclaim
+spec:
+  accessModes:
+    - ReadWriteOnce  //this should be always similar to pv.yml file.
+  resources:
+    requests:
+      storage: 5Gi  //this should be same or less than the size mentioned in the pv.yml file.
